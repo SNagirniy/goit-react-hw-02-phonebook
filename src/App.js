@@ -3,7 +3,6 @@ import Container from 'components/Container';
 import Section from 'components/Section';
 import ContactForm from 'components/ContactForm';
 import Contactlist from 'components/Contactlist';
-import ListItem from 'components/ListItem';
 import Filter from 'components/Filter';
 import Notification from 'components/Notification';
 
@@ -68,9 +67,9 @@ class App extends Component {
             <Filter value={filter} onChange={changeFilter} />
           )}
           {contacts.length > 0 ? (
-            <Contactlist>
-              <ListItem data={getVisibleContacts()} onDelete={deleteContact} />
-            </Contactlist>
+            <Contactlist
+              data={getVisibleContacts()}
+              onDelete={deleteContact}/>
           ) : (
             <Notification
               text={'There are no contacts in Your phonebook . . .'}
