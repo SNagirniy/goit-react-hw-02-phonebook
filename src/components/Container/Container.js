@@ -1,19 +1,13 @@
-import React from "react";
+import React from 'react';
 import propTypes from 'prop-types';
-import s from './Container.module.css'
+import s from './Container.module.css';
 
 const Container = ({ children }) => {
-    return (
-        <div className={s.container}>
-            {children}
-        </div>
-    )
+  return <div className={s.container}>{children}</div>;
 };
-
 
 Container.propTypes = {
-    children: propTypes.arrayOf(propTypes.element)
+  children: propTypes.arrayOf(propTypes.element),
 };
-
 
 export default Container;
